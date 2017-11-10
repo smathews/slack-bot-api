@@ -26,7 +26,7 @@ class Bot extends EventEmitter {
      * Starts a Real Time Messaging API session
      */
      login() {
-         this._api('rtm.start').then((data) => {
+         this._api('rtm.connect').then((data) => {
              this.wsUrl = data.url;
              this.self = data.self;
              this.team = data.team;
